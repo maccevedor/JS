@@ -1,10 +1,35 @@
+var express = require('express');
+var app = express();
+var path = require('path');
+var fs = require('fs');
 
-var lslib = require('./lslib');
 
-var dirname = process.argv[2];
-var ext = process.argv[3];
+//app.use(bodyParser.urlencoded({extended: false}));
+//app.use(require('stylus').middleware(process.argv[3]));
 
-lslib(dirname, ext, function(err, files) {
-  for (i = 0; i < files.length; i++) {
-    console.log(files[i]);
-  }
+//app.post('/form',function(req,res){
+//    console.log(req,res);
+//	res.send(req.body.str.split('').reverse().join(''));
+//});
+
+//app.get('/search',function(req,res){
+//    var query = req.query
+//   res.send(query)
+
+//})
+
+app.get('/books',function(req,res){
+    fs.readFile(process.argv[3],function(err,content){
+    if(err){
+        res.send(500);
+    }
+    try{
+        var books = JSON.parse(content.toString());
+        res.json(books);
+    }catch(error){
+        res.send(500)
+    }
+    })
+})
+
+app.listen(process.argv[2]);
