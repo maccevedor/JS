@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "bl": "^1.2.1",
+    "express": "^3.5.0",
+    "expressworks": "file:expressworks",
     "through2-map": "^3.0.0"
   }
 }
