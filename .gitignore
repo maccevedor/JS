@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 # Created by https://www.gitignore.io/api/vim,node,visualstudiocode
+=======
+# Created by https://www.gitignore.io/api/node
+>>>>>>> 29a2c7d4b51e9a8b160076c83f401ce521b6b685
 
 ### Node ###
 # Logs
@@ -62,6 +66,7 @@ typings/
 .env
 
 
+<<<<<<< HEAD
 ### Vim ###
 # swap
 .sw[a-p]
@@ -84,3 +89,7 @@ tags
 
 
 # End of https://www.gitignore.io/api/vim,node,visualstudiocode
+=======
+
+# End of https://www.gitignore.io/api/node
+>>>>>>> 29a2c7d4b51e9a8b160076c83f401ce521b6b685
